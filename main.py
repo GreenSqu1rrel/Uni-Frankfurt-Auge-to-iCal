@@ -7,9 +7,9 @@ html = ""
 with open(input("Inputfile: "), 'r') as f:
     html = f.read()
 outputfile.write('Subject, Start Date, Start Time, End Date, End Time, Location, Description \n')
-eventname = 'STO - Einführung in die Informatik'
+eventname = input("Event Name: ")
 
-basedate = datetime.datetime(2024, 10, 14)
+basedate = datetime.datetime(int(input("year")), int(input("month")), int(input("day")))
 
 soup = BeautifulSoup(html, 'html.parser')
 #print(soup.find_all('td', {'class': 'question'}))
